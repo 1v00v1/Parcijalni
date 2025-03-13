@@ -1,14 +1,14 @@
 public class Motocikl extends Vozilo{
     private String tipMotora;
 
-    public Motocikl(String marka, String regBr, int godProizvodnje, String svojstvoMotora) {
+    public Motocikl(String marka, String regBr, int godProizvodnje, String tipMotora) {
         super(marka, regBr, godProizvodnje);
-        this.tipMotora = svojstvoMotora;
+        this.tipMotora = tipMotora;
     }
 
     @Override
     void prikažiPodatke() {
         super.prikažiPodatke();
-        System.out.printf("\nTip motora: %s",this.tipMotora);
+        System.out.println("Tip Motora"+tipMotora);
     }
 }

@@ -9,6 +9,10 @@ public  class Vozilo {
     this.godProizvodnje = godProizvodnje;
   }
 
+  public Vozilo() {
+
+  }
+
   public int getGodProizvodnje() {
     return godProizvodnje;
   }
@@ -21,9 +25,18 @@ public  class Vozilo {
     return regBr;
   }
 
+  @Override
+  public String toString() {
+    return "Vozilo{" +
+            "godProizvodnje=" + godProizvodnje +
+            ", regBr='" + regBr + '\'' +
+            ", marka='" + marka + '\'' +
+            '}';
+  }
+
   void učitajPodatke(){}
   void prikažiPodatke(){
-    System.out.printf("\nVozilo marke %s\nRegistarskih oznaka: %s\nGodina proizvodnje: %d",
-            this.marka,this.regBr,this.godProizvodnje);
+    System.out.println("Vozilo "+marka +"\nRegistarskih Oznaka "+ regBr +"\nGodina Proizvodnje :"+ godProizvodnje);
   }
+
 }

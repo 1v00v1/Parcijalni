@@ -1,9 +1,12 @@
+import java.io.IOException;
+import java.util.List;
+//C:\Users\goran\Documents\Java-Algebra\modul-1\Parcijalni\test.txt
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+EvidencijaVozila evidencijaVozila = new EvidencijaVozila();
+evidencijaVozila.spremiPodatkeUDatoteku("C:\\Users\\goran\\Documents\\Java-Algebra\\modul-1\\Parcijalni\\test.txt");
 
-Motocikl m = new Motocikl("asdas","as-433-ss",2000,"Dvotaktni");
-   m.prikažiPodatke();
     }
 
 }
