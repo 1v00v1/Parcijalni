@@ -25,18 +25,10 @@ public  class Vozilo {
     return regBr;
   }
 
-  @Override
-  public String toString() {
-    return "Vozilo{" +
-            "godProizvodnje=" + godProizvodnje +
-            ", regBr='" + regBr + '\'' +
-            ", marka='" + marka + '\'' +
-            '}';
-  }
 
   void učitajPodatke(){}
-  void prikažiPodatke(){
-    System.out.println("Vozilo "+marka +"\nRegistarskih Oznaka "+ regBr +"\nGodina Proizvodnje :"+ godProizvodnje);
+  String prikažiPodatke(){
+    return "Vozilo "+marka +"\nRegistarskih Oznaka "+ regBr +"\nGodina Proizvodnje :"+ godProizvodnje;
   }
 
 }

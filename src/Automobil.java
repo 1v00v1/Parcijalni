@@ -7,10 +7,7 @@ public class Automobil extends Vozilo{
     }
 
     @Override
-    void prikažiPodatke() {
-        super.prikažiPodatke();
-        System.out.println("\nBroj Vrata "+brVrata);
+    String prikažiPodatke() {
+        return super.prikažiPodatke()+"\nBroj vrata "+brVrata;
     }
-
-
 }

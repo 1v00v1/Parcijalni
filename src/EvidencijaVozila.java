@@ -23,7 +23,7 @@ public class EvidencijaVozila {
         try(FileWriter fw = new FileWriter(datoteka)){
             evidencijaVozila.forEach(vozilo -> {
                 try {
-                   fw.write(vozilo.getMarka());
+                   fw.write(vozilo.prikažiPodatke());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

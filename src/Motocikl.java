@@ -6,9 +6,5 @@ public class Motocikl extends Vozilo{
         this.tipMotora = tipMotora;
     }
 
-    @Override
-    void prikažiPodatke() {
-        super.prikažiPodatke();
-        System.out.println("Tip Motora"+tipMotora);
-    }
+
 }
