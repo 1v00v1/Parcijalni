@@ -10,4 +10,9 @@ public class Automobil extends Vozilo{
     String prikažiPodatke() {
         return super.prikažiPodatke()+"\nBroj vrata "+brVrata;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +brVrata ;
+    }
 }

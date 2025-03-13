@@ -1,4 +1,6 @@
-public  class Vozilo {
+import java.io.Serializable;
+
+public  class Vozilo implements Serializable {
   private  String regBr;
   private String marka;
   private int godProizvodnje;
@@ -31,4 +33,8 @@ public  class Vozilo {
     return "Vozilo "+marka +"\nRegistarskih Oznaka "+ regBr +"\nGodina Proizvodnje :"+ godProizvodnje;
   }
 
+  @Override
+  public String toString() {
+    return marka+godProizvodnje+regBr;
+  }
 }

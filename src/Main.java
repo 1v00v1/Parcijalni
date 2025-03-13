@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 EvidencijaVozila evidencijaVozila = new EvidencijaVozila();
-evidencijaVozila.spremiPodatkeUDatoteku("C:\\Users\\goran\\Documents\\Java-Algebra\\modul-1\\Parcijalni\\test.txt");
+evidencijaVozila.dodajVozilo(new Automobil("as","asdsa",2222,4));
+evidencijaVozila.ucitajPodatkeIzDatoteke("C:\\Users\\goran\\Documents\\Java-Algebra\\modul-1\\Parcijalni\\test.txt");
 
     }
 

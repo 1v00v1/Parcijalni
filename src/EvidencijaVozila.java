@@ -17,17 +17,29 @@ public class EvidencijaVozila {
     void dodajVozilo(Vozilo v) {
         this.evidencijaVozila.add(v);
     }
+void ucitajPodatkeIzDatoteke(String datoteka){
+      try(FileInputStream fis = new FileInputStream(datoteka);ObjectInputStream ois = new ObjectInputStream(fis)) {
+          System.out.println( ois.readObject());
 
+      } catch (FileNotFoundException e) {
+          throw new RuntimeException(e);
+      } catch (IOException e) {
+          throw new RuntimeException(e);
+      } catch (ClassNotFoundException e) {
+          throw new RuntimeException(e);
+      }
+
+}
 
     void spremiPodatkeUDatoteku(String datoteka) {
-        try(FileWriter fw = new FileWriter(datoteka)){
-            evidencijaVozila.forEach(vozilo -> {
-                try {
-                   fw.write(vozilo.prikažiPodatke());
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            });
+        try{
+           FileOutputStream fos = new FileOutputStream(datoteka);
+           ObjectOutputStream oos = new ObjectOutputStream(fos);
+          for (Vozilo v : evidencijaVozila){
+              oos.writeObject(v.prikažiPodatke());
+          }
+          oos.close();
+          fos.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
