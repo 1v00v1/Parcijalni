@@ -6,6 +6,7 @@ public class Main {
 
 EvidencijaVozila evidencijaVozila = new EvidencijaVozila();
 evidencijaVozila.dodajVozilo(new Automobil("as","asdsa",2222,4));
+evidencijaVozila.dodajVozilo(new Automobil("aasdadsadsas","12312",2222,44));
 evidencijaVozila.ucitajPodatkeIzDatoteke("C:\\Users\\goran\\Documents\\Java-Algebra\\modul-1\\Parcijalni\\test.txt");
 
     }

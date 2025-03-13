@@ -21,8 +21,6 @@ void ucitajPodatkeIzDatoteke(String datoteka){
       try(FileInputStream fis = new FileInputStream(datoteka);ObjectInputStream ois = new ObjectInputStream(fis)) {
           System.out.println( ois.readObject());
 
-      } catch (FileNotFoundException e) {
-          throw new RuntimeException(e);
       } catch (IOException e) {
           throw new RuntimeException(e);
       } catch (ClassNotFoundException e) {
